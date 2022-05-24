@@ -1,3 +1,4 @@
+/* GENERAL MODAL SETTINGS */
 .modal {
   height: 100vh;
   width: 100%;
@@ -12,12 +13,10 @@
   pointer-events: none;
   transition: 0.5s;
 }
-
 .modal.active {
   opacity: 1;
   pointer-events: all;
 }
-
 .modal--content {
   padding: 20px;
   border-radius: 12px;
@@ -25,7 +24,124 @@
   transform: scale(0.5);
   transition: 0.4s all;
 }
-
 .modal--content.active {
   transform: scale(1);
+}
+
+/* ADD BUTTON MODAL SETTINGS IN APP */
+.modal--title {
+  margin-bottom: 20px;
+}
+.modal--info input {
+  width: 98%;
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  margin: 5px 0;
+}
+.modal--btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 20px;
+}
+.modal--btns button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.modal--add--btn {
+  opacity: 0.6;
+  pointer-events: none;
+  background-color: rgba(72, 212, 95, 0.781);
+  transition: 0.4s all;
+}
+.modal--add--btn:hover {
+  background-color: rgb(72, 212, 95);
+}
+.modal--add--btn.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal--clear--btn {
+  background-color: #f2f2f2c5;
+  transition: 0.4s all;
+}
+.modal--clear--btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* CONFIRM BTNS IN MODAL ITEM */
+.confirm--title {
+  font-size: 24px;
+  margin: 10px;
+}
+.confirm--btns button{
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.confirm--btns{
+  display: flex;
+  justify-content: center;
+}
+.confirm--btns button:last-child:hover {
+ background-color: rgb(223, 67, 67);
+}
+.confirm--btns button:first-child:hover {
+  background-color: rgb(84, 216, 72);
+}
+
+/* MORE INFO IN MORE INFO*/
+.more--info--div {
+  display: flex;
+}
+.more--info--comments {
+  margin-left: 50px;
+}
+.more--info--title {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 32px;
+}
+.more--info--information p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.more--info--information button,
+.more--info--comments button {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.4s all;
+}
+.more--info--information button:hover,
+.more--info--comments button:hover {
+  background-color: #deee4f;
+}
+.more--info--comments p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.more--info--comments {
+  display: flex;
+  flex-direction: column;
+} 
+.more--info--comments textarea{
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  resize: none;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 16px;
 }

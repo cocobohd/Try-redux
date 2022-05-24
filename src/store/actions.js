@@ -1,6 +1,4 @@
-import { CHANGE_MODAL } from "./types"
-import { CHANGE_ISINPUTEMPTY } from "./types"
-import { ADD_NEW_OBJECT } from "./types"
+import { CHANGE_MODAL, CHANGE_ISINPUTEMPTY, ADD_NEW_OBJECT, DELETE_ITEM } from "./types"
 
 export function changeModal () {
   return {
@@ -19,5 +17,12 @@ export function addNewObject(obj) {
   return {
     type: ADD_NEW_OBJECT,
     payload: obj
+  }
+}
+
+export function deleteItem(index) {
+  return {
+    type: DELETE_ITEM,
+    index
   }
 }

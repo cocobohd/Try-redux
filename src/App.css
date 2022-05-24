@@ -3,11 +3,9 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
 }
-
 body {
   background: url('https://html.sammy-codes.com/images/background.jpg');
 }
-
 .app {
   width: 100%;
   height: 100vh;
@@ -19,7 +17,6 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
 .add--btn {
   padding: 10px 20px;
   border: none;
@@ -29,58 +26,11 @@ body {
   transition: 0.4s all;
   border-radius: 5px;
 }
-
 .add--btn:hover {
   background-color: bisque;
 }
-
-.modal--title {
-  margin-bottom: 20px;
-}
-
-.modal--info input {
-  width: 98%;
-  border: none;
-  font-size: 16px;
-  padding: 5px;
-  margin: 5px 0;
-}
-
-.modal--btns {
+.items--position {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-
-  margin-top: 20px;
-}
-
-.modal--btns button {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.modal--add--btn {
-  opacity: 0.6;
-  pointer-events: none;
-  background-color: rgba(72, 212, 95, 0.781);
-  transition: 0.4s all;
-}
-.modal--add--btn:hover {
-  background-color: rgb(72, 212, 95);
-}
-
-.modal--add--btn.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal--clear--btn {
-  background-color: #f2f2f2c5;
-  transition: 0.4s all;
-}
-.modal--clear--btn:hover {
-  background-color: #f2f2f2;
+  flex-wrap: wrap;
 }

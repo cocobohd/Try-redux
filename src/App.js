@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Item from './components/Item/Item';
 import Modal from './components/Modal/Modal';
 import { connect } from 'react-redux';
 import { changeModal, changeIsInputEmpty, addNewObject } from "./store/actions.js"
@@ -12,6 +13,20 @@ function App(prop) {
   const widthInput = React.createRef()
   const heigthInput = React.createRef()
   const weightInput = React.createRef()
+  const arrFromStore = prop.addNewObjectReducer
+  const itemRender = arrFromStore.map((item, index) => {
+    return <Item 
+      key = {item.id}
+      id = {item.id}
+      imgUrl = {item.img}
+      name = {item.name}
+      count = {item.count}
+      width = {item.size.width}
+      heigth = {item.size.heigth}
+      weight = {item.weigth}
+      index = {index}
+    />
+  })
 
   function newObject() {
     const newObj = {
@@ -52,6 +67,9 @@ function App(prop) {
   return (
     <div className="app">
       <button className="add--btn" onClick={prop.changeModalVisible}>Add</button>
+      <div className="items--position">
+        {itemRender}
+      </div>
       <Modal isActive={prop.modalVisible} setIsActive={prop.changeModalVisible}>
         <h1 className="modal--title">
           Please write info about product
@@ -79,10 +97,11 @@ function App(prop) {
 }
 
 function mapStateToProps(state) {
-  const { changeModalReducer, isInputEmptyReducer} = state
+  const { changeModalReducer, isInputEmptyReducer, addNewObjectReducer} = state
   return {
     modalVisible: changeModalReducer.modalVisible,
     isInputsEmpty: isInputEmptyReducer.isInputsEmpty,
+    addNewObjectReducer
   }
 }
 
