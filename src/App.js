@@ -38,7 +38,8 @@ function App(prop) {
         width: parseInt(widthInput.current.value),
         heigth: parseInt(heigthInput.current.value)
       },
-      weigth: weightInput.current.value
+      weigth: weightInput.current.value,
+      comments: []
     }
     clear()
     prop.changeModalVisible()

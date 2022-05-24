@@ -1,13 +1,12 @@
 import "./item.css"
 import React from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { deleteItem } from "../../store/actions"
 import Modal from "../Modal/Modal"
 import MoreInfo from "../MoreInfo/MoreInfo"
 
 export default function Item(prop) {
   const dispatch = useDispatch()
-  const stateArray = useSelector(state => state.addNewObjectReducer)
   const [confirmDelete, setConfirmDelete] = React.useState(false)
   const [moreInfoBtn, setMoreInfoBtn] = React.useState(false)
   
@@ -53,6 +52,8 @@ export default function Item(prop) {
           width = {prop.width}
           heigth = {prop.heigth}
           weight = {prop.weight}
+          id = {prop.id}
+          index = {prop.index}
         />
       </Modal>
     </div>

@@ -137,11 +137,17 @@
   flex-direction: column;
 } 
 .more--info--comments textarea{
-  width: 100%;
+  width: 91%;
   height: 60px;
   font-size: 24px;
   resize: none;
   border: none;
   margin-bottom: 10px;
   font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.comments--div {
+  margin-top: 10px;
+  font-size: 18px;
 }
